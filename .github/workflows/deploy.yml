@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Replace 'main' with your default branch if different
+      - main  # Replace with your default branch if it's different
 
 permissions:
   contents: read
@@ -13,13 +13,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Clone the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      # Step 2: Prepare static files
+      - name: Prepare static files
+        run: |
+          mkdir -p public
+          cp index.html public/
 
-      - name: Build and deploy to GitHub Pages
+      # Step 3: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+        with:
+          folder: public
