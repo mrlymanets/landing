@@ -17,11 +17,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Крок 2: Підготовка файлів
-      - name: Prepare static files
+      # Крок 2: Підготовка файлів для розгортання
+      - name: Prepare deployment files
         run: |
           mkdir -p public
-          cp index.html public/
+          echo "<!DOCTYPE html><html lang='uk'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Test Page</title></head><body><h1>Hello from GitHub Pages!</h1></body></html>" > public/index.html
 
       # Крок 3: Завантаження артефактів
       - name: Upload artifact
