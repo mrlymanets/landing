@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Змініть на вашу основну гілку, якщо це не "main"
+      - main  # Замість main вкажіть вашу основну гілку
 
 permissions:
   contents: read
@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Крок 1: Клонування репозиторію
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Крок 2: Підготовка статичних файлів
+      # Крок 2: Підготовка файлів
       - name: Prepare static files
         run: |
           mkdir -p public
