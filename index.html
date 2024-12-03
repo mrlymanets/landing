@@ -7,66 +7,60 @@
     <style>
         /* Загальний стиль */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center fixed;
-            background-size: cover;
-            line-height: 1.6;
-        }
-
-        /* Фон для секцій */
-        .overlay {
-            background: rgba(255, 255, 255, 0.8); /* Прозорий білий фон */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Шапка сайту */
-        header {
-            background: rgba(76, 175, 80, 0.9); /* Прозорий зелений */
-            color: #fff;
-            padding: 20px 0;
+            background-color: #f8f9fa;
             text-align: center;
-            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
         }
 
         header h1 {
-            font-size: 2.5rem;
             margin: 0;
+            font-size: 2.5rem;
         }
 
         header p {
-            margin: 10px 0 0;
+            margin: 10px 0;
             font-size: 1.2rem;
         }
 
-        /* Секції */
         section {
-            padding: 40px 20px;
             margin: 20px auto;
+            padding: 20px;
             max-width: 800px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         section h2 {
-            font-size: 1.8rem;
             color: #4CAF50;
+            font-size: 1.8rem;
             margin-bottom: 15px;
-            text-align: center;
         }
 
         section p {
             font-size: 1.1rem;
-            text-align: center;
+            color: #333;
         }
 
-        /* Підвал */
+        img {
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         footer {
-            background: rgba(51, 51, 51, 0.9);
-            color: #fff;
-            text-align: center;
+            background-color: #333;
+            color: white;
             padding: 15px 0;
             margin-top: 20px;
         }
@@ -75,17 +69,6 @@
             margin: 0;
             font-size: 0.9rem;
         }
-
-        /* Адаптивний дизайн */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -93,14 +76,21 @@
         <h1>Лиманець Максим Васильович</h1>
         <p>Аспірант ОНУ ім. Мечникова</p>
     </header>
-    <section id="topic" class="overlay">
+
+    <section>
         <h2>Тема дисертації</h2>
         <p>Формування конкурентоспроможної управлінської команди сучасного підприємництва в IT сфері</p>
     </section>
-    <section id="about" class="overlay">
+
+    <section>
         <h2>Про мене</h2>
         <p>Я займаюся дослідженнями в галузі управління командами та впровадження інноваційних підходів у IT-секторі.</p>
+        <!-- Replace 'picture1.jpg' with your actual image file name -->
+        <img src="picture1.jpg" alt="Research Image">
+        <!-- Replace 'logo.png' with your actual image file name -->
+        <img src="logo.png" alt="Personal Logo" style="width: 150px;">
     </section>
+
     <footer>
         <p>© 2024 Лиманець Максим Васильович</p>
     </footer>
