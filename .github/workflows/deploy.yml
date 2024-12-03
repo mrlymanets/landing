@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Replace with your default branch if it's different
+      - main  # Змініть на вашу основну гілку, якщо це не "main"
 
 permissions:
   contents: read
@@ -13,18 +13,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Clone the repository
+      # Крок 1: Клонування репозиторію
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Prepare static files
+      # Крок 2: Підготовка статичних файлів
       - name: Prepare static files
         run: |
           mkdir -p public
           cp index.html public/
 
-      # Step 3: Deploy to GitHub Pages
+      # Крок 3: Завантаження артефактів
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages
+          path: public/
+
+      # Крок 4: Розгортання GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          folder: public
