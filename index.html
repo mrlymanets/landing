@@ -11,16 +11,26 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f8f9fa;
+            background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center fixed;
+            background-size: cover;
             line-height: 1.6;
+        }
+
+        /* Фон для секцій */
+        .overlay {
+            background: rgba(255, 255, 255, 0.8); /* Прозорий білий фон */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Шапка сайту */
         header {
-            background: linear-gradient(90deg, #4CAF50, #3E8E41);
+            background: rgba(76, 175, 80, 0.9); /* Прозорий зелений */
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         header h1 {
@@ -38,9 +48,6 @@
             padding: 40px 20px;
             margin: 20px auto;
             max-width: 800px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
 
         section h2 {
@@ -57,7 +64,7 @@
 
         /* Підвал */
         footer {
-            background: #333;
+            background: rgba(51, 51, 51, 0.9);
             color: #fff;
             text-align: center;
             padding: 15px 0;
@@ -86,11 +93,11 @@
         <h1>Лиманець Максим Васильович</h1>
         <p>Аспірант ОНУ ім. Мечникова</p>
     </header>
-    <section id="topic">
+    <section id="topic" class="overlay">
         <h2>Тема дисертації</h2>
         <p>Формування конкурентоспроможної управлінської команди сучасного підприємництва в IT сфері</p>
     </section>
-    <section id="about">
+    <section id="about" class="overlay">
         <h2>Про мене</h2>
         <p>Я займаюся дослідженнями в галузі управління командами та впровадження інноваційних підходів у IT-секторі.</p>
     </section>
